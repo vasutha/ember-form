@@ -1,0 +1,10 @@
+{{#each content as |option|}}
+  {{#if hasBlock}}
+    {{yield option}}
+  {{else}}
+    {{ui-radio content=option class=optionsClass}}
+    {{#if option.description}}
+      <span class="radio-group-item-desc">{{option.description}}</span>
+    {{/if}}
+  {{/if}}
+{{/each}}

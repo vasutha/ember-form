@@ -1,0 +1,12 @@
+{{#ui-label}}
+  {{input
+    type='checkbox'
+    checked=checked
+    disabled=disabled
+    name=name
+    tabindex=tabindex}}
+{{/ui-label}}
+
+{{#if hasValidation}}
+  {{ui-error-msg errors=errors}}
+{{/if}}

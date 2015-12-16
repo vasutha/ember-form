@@ -1,0 +1,95 @@
+{{#if label}}
+  {{#unless skipLabel}}
+    {{ui-label for=sanitizedID content=sanitizedLabel}}
+  {{/unless}}
+{{/if}}
+
+{{#if isBasicInput}}
+  {{ui-input
+    type=type
+    value=value
+    name=sanitizedName
+    classNameBindings='inputClass'
+    placeholder=placeholder
+    autofocus=autofocus
+    disabled=disabled}}
+{{/if}}
+
+{{#if isSelect}}
+  {{ui-select
+    name=sanitizedName
+    content=content
+    optionValuePath=optionValuePath
+    optionLabelPath=optionLabelPath
+    prompt=prompt
+    value=value
+    autofocus=autofocus}}
+{{/if}}
+
+{{#if isTextarea}}
+  {{ui-textarea
+    name=sanitizedName
+    value=value
+    classNameBindings='textareaClass'
+    placeholder=placeholder
+    disabled=disabled
+    rows=rows
+    autofocus=autofocus
+    maxlength=maxlength}}
+{{/if}}
+
+{{#if isAutoComplete}}
+  {{auto-complete
+    name=sanitizedName
+    url=url
+    store=store
+    value=value
+    placeholder=placeholder
+    enabled=enabled
+    multiple=multiple
+    minimumInputLength=minimumInputLength
+    needsGrouping=needsGrouping}}
+{{/if}}
+
+{{#if isRadio}}
+  {{ui-radio-group
+    name=sanitizedName
+    content=content
+    optionValuePath=optionValuePath
+    optionLabelPath=optionLabelPath
+    value=value
+  }}
+{{/if}}
+
+{{#if isCheckbox}}
+  {{custom-checkbox
+    label=sanitizedLabel
+    name=sanitizedName
+    checked=value
+  }}
+{{/if}}
+
+{{#if isDate}}
+  {{ui-date-time-picker
+    name=sanitizedName
+    value=value
+    displayTimePicker=false
+    enablePreviousDate=enablePreviousDate
+    clearBtn = clearBtn
+    disabled=disabled
+    placeholder=placeholder}}
+{{/if}}
+
+{{#if isDropdown}}
+  {{ember-selectize
+    name=sanitizedName
+    content = content
+    value= value
+    optionValuePath=optionValuePath
+    optionLabelPath=optionLabelPath
+    placeholder=placeholder}}
+{{/if}}
+
+{{!-- {{#if hasValidation}}
+  {{ui-error-msg errorsBinding=errors}}
+{{/if}} --}}

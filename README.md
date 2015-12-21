@@ -4,7 +4,7 @@ An Ember cli addon which allows you to create forms and validations quick & hass
 
 ## Installation
 
-* `ember install git+ssh://git@github.com:freshdesk/ember-form.git --save`
+`ember install git+ssh://git@github.com:freshdesk/ember-form.git --save`
 
 ## Usage:
 
@@ -68,7 +68,7 @@ _______
 
 #### ui-form Component ####
 
-*** for (@object)** - Ember Object / Ember model Record.
+**\* for (@object)** - Ember Object / Ember model Record.
 
 **onValidationFailed (@string)** - action to invoke on on Validation Failed.
 ________
@@ -77,7 +77,7 @@ ________
 
 **type (@string)** - [ text / number/ email / radio / checkbox / select / textArea ].
 
-*** for (@string)** - form (object/model)'s keys to map the field.
+**\* for (@string)** - form (object/model)'s keys to map the field.
 
 **value** - value of the field.
 
@@ -100,7 +100,7 @@ ________
 **type (@string)** - cancel (will fire the default cancel action without validate) / whatever (action to trigger) will get fired after validate if anything provided.
 ________
 
-***** fields are mandatory.
+**'*'** fields are mandatory.
 
 ## RFC
 

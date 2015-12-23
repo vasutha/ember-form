@@ -102,7 +102,7 @@ ________
 
 **'*'** fields are mandatory.
 
-## RFC
+## Enhancement
 
 * {{ui-field type="AutoComplete"}} - work in progress.
 * planned to introduce {{ui-field type="richTextEditor"}} wrapper for redactor / nice one.
@@ -110,9 +110,6 @@ ________
 * for now field values are in two-way binding. will be change to one-way binding in near future.
 
 * This addon internally using [dockyard's ember-validation](https://github.com/dockyard/ember-validations) addon so kindly ref the linked repo for validation examples. Right now validations will be taken from the model provided for ui-form "for" but soon this part will be set free for developers comfort.
-
-
-
 
 ## Running
 

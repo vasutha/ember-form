@@ -1,6 +1,8 @@
 import Ember from 'ember';
 import layout from './template';
 
+const { computed } = Ember;
+
 export default Ember.Component.extend({
   layout: layout,
   init: function() {
@@ -17,6 +19,8 @@ export default Ember.Component.extend({
     this._super();
   },
   optionsClass: 'radio-group-item',
-  tagName: 'Div',
-  classNames: ['form-group']
+  tagName: 'div',
+  classNames: ['form-group'],
+  
+  hasBlock: computed.bool('template').readOnly()
 });
